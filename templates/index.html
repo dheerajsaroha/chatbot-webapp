@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced ML Chatbot</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-container shadow-lg">
+
+    <div class="chat-header">
+        <h4 class="m-0">🤖 Joana – AI Chatbot</h4>
+        <small>Powered by Machine Learning</small>
+    </div>
+
+    <div id="messages" class="chat-body"></div>
+
+    <div class="chat-input-area">
+        <input id="user_input" class="form-control chat-input"
+               placeholder="Type a message...">
+        <button class="btn btn-primary chat-btn" onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+
+<script>
+/* ---------------------- ADD MESSAGE ---------------------- */
+function addMessage(text, sender) {
+    const messages = document.getElementById("messages");
+
+    const avatarBot = '<img src="/static/bot.png" class="avatar">';
+    const avatarUser = '<img src="/static/user.png" class="avatar">';
+
+    const bubble = `
+        <div class="d-flex mb-3 ${sender === 'user' ? 'justify-content-end' : ''}">
+            ${sender === 'bot' ? avatarBot : ''}
+            <div class="bubble bubble-${sender}">${text}</div>
+            ${sender === 'user' ? avatarUser : ''}
+        </div>
+    `;
+
+    messages.insertAdjacentHTML("beforeend", bubble);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+/* ---------------------- SEND MESSAGE ---------------------- */
+function sendMessage() {
+    const input = document.getElementById("user_input");
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    addMessage(text, "user");
+    input.value = "";
+
+    // Bot typing...
+    addTypingIndicator();
+
+    fetch("/get_response", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "message=" + encodeURIComponent(text)
+    })
+        .then(res => res.json())
+        .then(data => {
+            removeTypingIndicator();
+            typeWriter(data.reply);
+        })
+        .catch(err => {
+            removeTypingIndicator();
+            addMessage("⚠ Error connecting to server.", "bot");
+        });
+}
+
+/* ---------------------- TYPING INDICATOR ---------------------- */
+function addTypingIndicator() {
+    const messages = document.getElementById("messages");
+
+    const indicator = `
+        <div class="d-flex mb-3 bot-temp">
+            <img src="/static/bot.png" class="avatar">
+            <div class="bubble bubble-bot bubble-bot-temp">Typing...</div>
+        </div>
+    `;
+
+    messages.insertAdjacentHTML("beforeend", indicator);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function removeTypingIndicator() {
+    const temp = document.querySelector(".bot-temp");
+    if (temp) temp.remove();
+}
+
+/* ---------------------- TYPEWRITER ANIMATION ---------------------- */
+function typeWriter(text) {
+    let i = 0;
+    let result = "";
+    const speed = 25;
+
+    function writeChar() {
+        if (i < text.length) {
+            result += text.charAt(i);
+            i++;
+
+            const messages = document.getElementById("messages");
+
+            // Remove previous typing bubble
+            document.querySelector(".bubble-bot-typing")?.parentNode.remove();
+
+            const bubble = `
+                <div class="d-flex mb-3">
+                    <img src="/static/bot.png" class="avatar">
+                    <div class="bubble bubble-bot bubble-bot-typing">${result}</div>
+                </div>
+            `;
+
+            messages.insertAdjacentHTML("beforeend", bubble);
+            messages.scrollTop = messages.scrollHeight;
+
+            setTimeout(writeChar, speed);
+        }
+    }
+
+    writeChar();
+}
+
+/* ---------------------- ENTER KEY SUPPORT ---------------------- */
+document.getElementById("user_input").addEventListener("keyup", function (event) {
+    if (event.key === "Enter") sendMessage();
+});
+</script>
+
+</body>
+</html>

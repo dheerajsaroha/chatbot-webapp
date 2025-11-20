@@ -1,0 +1,1287 @@
+{
+  "intents": [
+    {
+      "tag": "greet",
+      "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
+      "responses": ["Hello! How can I help you today?"]
+    },
+    {
+      "tag": "bye",
+      "patterns": ["bye", "see you", "good night", "talk later"],
+      "responses": ["Goodbye!"]
+    },
+
+    {
+      "tag": "resume_help",
+      "patterns": ["help with resume", "improve my resume", "resume guidance"],
+      "responses": ["Sure! Tell me what you want to improve in your resume."]
+    },
+    {
+      "tag": "resume_format",
+      "patterns": ["best resume format", "format resume", "ATS friendly format"],
+      "responses": ["ATS-friendly formats include Reverse-Chronological and Hybrid."]
+    },
+    {
+      "tag": "resume_keywords",
+      "patterns": ["add keywords", "resume keywords", "skill keywords"],
+      "responses": ["I can help extract and insert job-specific keywords."]
+    },
+    {
+      "tag": "resume_summary_write",
+      "patterns": ["write summary", "resume summary", "create professional summary"],
+      "responses": ["Sure! Share your experience for a tailored summary."]
+    },
+    {
+      "tag": "resume_strengths",
+      "patterns": ["strengths for resume", "skills to add", "core strengths"],
+      "responses": ["Here are strong resume skills. Want technical or soft skills?"]
+    },
+    {
+      "tag": "resume_weaknesses",
+      "patterns": ["weakness for resume", "weakness example"],
+      "responses": ["I can list professional weaknesses that are safe to include."]
+    },
+    {
+      "tag": "resume_projects",
+      "patterns": ["add projects", "project description", "resume projects help"],
+      "responses": ["Share your project and I will convert it into resume format."]
+    },
+    {
+      "tag": "resume_bullets",
+      "patterns": ["rewrite bullet points", "improve bullet", "impact bullets"],
+      "responses": ["Send the bullets you want optimized."]
+    },
+    {
+      "tag": "resume_achievements",
+      "patterns": ["resume achievements", "add achievements", "quantify achievements"],
+      "responses": ["I can help convert achievements into quantified bullets."]
+    },
+    {
+      "tag": "resume_tailor_job",
+      "patterns": ["tailor my resume", "match resume to job", "customize for JD"],
+      "responses": ["Share the job description to tailor your resume."]
+    },
+    {
+      "tag": "resume_role_skills",
+      "patterns": ["skills for data analyst", "skills for python developer"],
+      "responses": ["I can list top skills for the specific role."]
+    },
+    {
+      "tag": "resume_errors",
+      "patterns": ["resume mistakes", "common resume errors"],
+      "responses": ["Here are common ATS resume mistakes to avoid."]
+    },
+    {
+      "tag": "resume_pdf_check",
+      "patterns": ["check my pdf", "ats check pdf", "pdf readability"],
+      "responses": ["Upload your PDF and I will analyze ATS compatibility."]
+    },
+
+
+
+    {
+      "tag": "ats_score",
+      "patterns": ["ats score", "check ATS score", "how much is ats score"],
+      "responses": ["Upload resume + job description for ATS scoring."]
+    },
+    {
+      "tag": "ats_improve",
+      "patterns": ["improve ats score", "fix ats issues"],
+      "responses": ["I can improve your score by adding relevant keywords."]
+    },
+    {
+      "tag": "ats_parse_resume",
+      "patterns": ["parse resume", "extract info", "extract skills"],
+      "responses": ["Upload your resume to extract skills, tools, experience."]
+    },
+    {
+      "tag": "ats_match_keywords",
+      "patterns": ["match keywords", "keyword gap", "missing keywords"],
+      "responses": ["Upload job description for a keyword match table."]
+    },
+    {
+      "tag": "ats_algo_explain",
+      "patterns": ["how ats works", "ats algorithm", "ats system"],
+      "responses": ["ATS matches skills, keywords, formatting and experience."]
+    },
+
+
+    {
+      "tag": "job_search_help",
+      "patterns": ["help me find jobs", "job search", "apply for jobs"],
+      "responses": ["Tell me your role and I will find openings."]
+    },
+    {
+      "tag": "job_roles_suggest",
+      "patterns": ["which roles suit me", "what roles can i apply"],
+      "responses": ["Share experience to suggest suitable job roles."]
+    },
+    {
+      "tag": "job_cover_letter",
+      "patterns": ["write cover letter", "cover letter help"],
+      "responses": ["Upload your resume and JD for a custom cover letter."]
+    },
+    {
+      "tag": "job_expectation",
+      "patterns": ["salary expectation", "expected ctc", "how much to ask"],
+      "responses": ["I can help with expected salary standards for your role."]
+    },
+    {
+      "tag": "job_application_status",
+      "patterns": ["check job status", "application update"],
+      "responses": ["Track job status by logging in to the platform."]
+    },
+
+
+
+    {
+      "tag": "interview_prep",
+      "patterns": ["prepare interview", "interview help", "get ready interview"],
+      "responses": ["Sure. Tell me the role to give relevant questions."]
+    },
+    {
+      "tag": "interview_basic",
+      "patterns": ["basic interview questions", "common questions"],
+      "responses": ["Here are common HR interview questions."]
+    },
+    {
+      "tag": "interview_technical",
+      "patterns": ["technical questions", "role technical interview"],
+      "responses": ["Let me know the role for technical interview questions."]
+    },
+    {
+      "tag": "interview_behavioral",
+      "patterns": ["behavioral questions", "situational questions"],
+      "responses": ["I can list top STAR-based questions."]
+    },
+    {
+      "tag": "interview_answer_help",
+      "patterns": ["help answer", "correct my answer"],
+      "responses": ["Share your answer; I will refine it."]
+    },
+    {
+      "tag": "interview_hr",
+      "patterns": ["hr questions", "tell me about yourself"],
+      "responses": ["I can help you craft HR interview answers."]
+    },
+
+  
+
+    {
+      "tag": "role_data_analyst",
+      "patterns": ["data analyst questions", "DA interview prep"],
+      "responses": ["I can provide DA interview topics and questions."]
+    },
+    {
+      "tag": "role_python_dev",
+      "patterns": ["python developer questions", "python interview"],
+      "responses": ["Here are common Python dev questions."]
+    },
+    {
+      "tag": "role_ml_engineer",
+      "patterns": ["ml engineer questions", "machine learning interview"],
+      "responses": ["I will give ML engineer questions with answers."]
+    },
+    {
+      "tag": "role_data_scientist",
+      "patterns": ["data scientist questions", "DS topics"],
+      "responses": ["I can prepare DS interview question sets."]
+    },
+    {
+      "tag": "role_sql_dev",
+      "patterns": ["sql developer questions", "sql interview"],
+      "responses": ["I can list SQL dev interview questions."]
+    },
+    {
+      "tag": "role_aiml_student",
+      "patterns": ["aiml student help", "what to study ai ml"],
+      "responses": ["I can guide your entire AI–ML learning path."]
+    },
+
+
+    {
+      "tag": "python_basics",
+      "patterns": ["python basics", "learn python", "python syntax"],
+      "responses": ["I can help you with Python basics and examples."]
+    },
+    {
+      "tag": "python_oop",
+      "patterns": ["python oop", "classes python", "inheritance python"],
+      "responses": ["Here are OOP concepts with examples."]
+    },
+    {
+      "tag": "python_ds",
+      "patterns": ["python data structures", "list tuple dict"],
+      "responses": ["I can explain Python data structures with examples."]
+    },
+    {
+      "tag": "python_error_fix",
+      "patterns": ["fix python error", "debug python"],
+      "responses": ["Paste the error and I will fix it."]
+    },
+    {
+      "tag": "python_projects",
+      "patterns": ["python project ideas", "mini project python"],
+      "responses": ["Here are beginner-to-advanced Python projects."]
+    },
+    {
+      "tag": "python_algorithms",
+      "patterns": ["python algorithms", "sorting in python"],
+      "responses": ["I can explain algorithms with Python code."]
+    },
+    {
+      "tag": "python_ats_algo",
+      "patterns": ["ats algorithm python", "write ats in python"],
+      "responses": ["I can create an ATS scoring Python script."]
+    },
+
+
+
+    {
+      "tag": "sql_basics",
+      "patterns": ["sql basics", "what is sql", "learn sql"],
+      "responses": ["I can teach SQL from basics with examples."]
+    },
+    {
+      "tag": "sql_joins",
+      "patterns": ["joins types", "inner join example", "left join query"],
+      "responses": ["Here are all join types with diagrams."]
+    },
+    {
+      "tag": "sql_groupby",
+      "patterns": ["group by explain", "aggregations", "sum count avg"],
+      "responses": ["I can explain GROUP BY and aggregate functions."]
+    },
+    {
+      "tag": "sql_advanced",
+      "patterns": ["window functions", "ctes", "ranking functions"],
+      "responses": ["Here is advanced SQL topic guidance."]
+    },
+    {
+      "tag": "sql_queries_practice",
+      "patterns": ["sql practice questions", "interview sql queries"],
+      "responses": ["I can give SQL practice questions with answers."]
+    },
+
+
+
+    {
+      "tag": "ml_basics",
+      "patterns": ["what is machine learning", "ml basics", "start ml"],
+      "responses": ["ML uses models that learn from data. Want types?"]
+    },
+    {
+      "tag": "ml_algorithms",
+      "patterns": ["ml algorithms list", "supervised algorithms"],
+      "responses": ["Here are key ML algorithms categorized."]
+    },
+    {
+      "tag": "ml_models_compare",
+      "patterns": ["compare models", "lr vs svm", "rf vs xgboost"],
+      "responses": ["I can compare ML models with pros and cons."]
+    },
+    {
+      "tag": "ml_overfit",
+      "patterns": ["what is overfitting", "overfit example"],
+      "responses": ["Overfitting happens when a model memorizes data."]
+    },
+    {
+      "tag": "ml_metrics",
+      "patterns": ["accuracy precision recall", "evaluation metrics"],
+      "responses": ["Here are common ML evaluation metrics explained."]
+    },
+    {
+      "tag": "ml_projects",
+      "patterns": ["ml project ideas", "machine learning projects"],
+      "responses": ["I can suggest end-to-end ML project ideas."]
+    },
+    {
+      "tag": "dl_basics",
+      "patterns": ["deep learning basics", "what is deep learning", "dl intro"],
+      "responses": ["Deep learning uses neural networks with many layers."]
+    },
+    {
+      "tag": "dl_cnn",
+      "patterns": ["cnn explain", "convolution network", "image model"],
+      "responses": ["CNNs are used for image classification and detection."]
+    },
+    {
+      "tag": "dl_rnn",
+      "patterns": ["rnn explain", "sequence model", "recurrent neural network"],
+      "responses": ["RNNs handle sequence data like text and time series."]
+    },
+    {
+      "tag": "dl_lstm",
+      "patterns": ["lstm model", "lstm explain", "memory networks"],
+      "responses": ["LSTMs handle long sequence dependencies."]
+    },
+    {
+      "tag": "dl_overfit",
+      "patterns": ["dl overfitting", "prevent overfitting in dl"],
+      "responses": ["Use dropout, batch normalization, and regularization."]
+    },
+    {
+      "tag": "dl_frameworks",
+      "patterns": ["tensorflow or pytorch", "best dl framework"],
+      "responses": ["Both are great; PyTorch is cleaner for research."]
+    },
+    {
+      "tag": "dl_projects",
+      "patterns": ["deep learning projects", "dl project ideas"],
+      "responses": ["I can list image, NLP, audio, and GAN-based projects."]
+    },
+
+    {
+      "tag": "genai_basics",
+      "patterns": ["what is generative ai", "gen ai basics", "gen ai explain"],
+      "responses": ["Generative AI creates new content from patterns in data."]
+    },
+    {
+      "tag": "genai_llm",
+      "patterns": ["what is LLM", "large language model explain"],
+      "responses": ["LLMs are models trained on massive text corpora."]
+    },
+    {
+      "tag": "genai_embeddings",
+      "patterns": ["embeddings explain", "vector embeddings", "text embeddings"],
+      "responses": ["Embeddings represent text as numerical vectors."]
+    },
+    {
+      "tag": "genai_prompting",
+      "patterns": ["prompt engineering", "how to write prompts"],
+      "responses": ["Use clear instructions, examples, formats, and constraints."]
+    },
+    {
+      "tag": "genai_rag",
+      "patterns": ["what is rag", "rag pipeline"],
+      "responses": ["RAG retrieves documents and generates contextual answers."]
+    },
+    {
+      "tag": "genai_agents",
+      "patterns": ["what are AI agents", "agentic workflows"],
+      "responses": ["Agents autonomously perform multi-step tasks."]
+    },
+    {
+      "tag": "genai_projects",
+      "patterns": ["gen ai projects", "llm projects"],
+      "responses": ["I can suggest chatbot, RAG, and automation projects."]
+    },
+
+
+
+    {
+      "tag": "stats_basics",
+      "patterns": ["stats basics", "mean median mode", "descriptive stats"],
+      "responses": ["I can help explain the basics of statistics."]
+    },
+    {
+      "tag": "stats_probability",
+      "patterns": ["probability basics", "probability rules"],
+      "responses": ["Probability describes the likelihood of an event."]
+    },
+    {
+      "tag": "stats_distributions",
+      "patterns": ["normal distribution", "binomial distribution"],
+      "responses": ["I can explain key statistical distributions."]
+    },
+    {
+      "tag": "stats_hypothesis",
+      "patterns": ["hypothesis testing", "p value explain"],
+      "responses": ["Hypothesis testing checks significance of results."]
+    },
+    {
+      "tag": "stats_correlation",
+      "patterns": ["correlation explain", "correlation vs causation"],
+      "responses": ["Correlation measures relationship strength."]
+    },
+    {
+      "tag": "stats_inference",
+      "patterns": ["statistical inference", "confidence interval explain"],
+      "responses": ["Inference generalizes sample insights to population."]
+    },
+
+
+
+    {
+      "tag": "excel_basics",
+      "patterns": ["excel basics", "learn excel", "excel intro"],
+      "responses": ["I can teach Excel from basics to advanced."]
+    },
+    {
+      "tag": "excel_formulas",
+      "patterns": ["excel formulas", "most used formulas", "sumifs"],
+      "responses": ["I can explain essential Excel formulas."]
+    },
+    {
+      "tag": "excel_functions",
+      "patterns": ["vlookup explain", "index match", "if formula"],
+      "responses": ["I can show how to use Excel lookup functions."]
+    },
+    {
+      "tag": "excel_charts",
+      "patterns": ["excel charts", "dashboard charts excel"],
+      "responses": ["I can help create charts and dashboards."]
+    },
+    {
+      "tag": "excel_pivot",
+      "patterns": ["pivot table explain", "pivot table example"],
+      "responses": ["Pivot tables summarize large datasets easily."]
+    },
+    {
+      "tag": "excel_interview",
+      "patterns": ["excel interview questions", "excel test prep"],
+      "responses": ["I can share Excel-based interview questions."]
+    },
+
+
+
+    {
+      "tag": "pbi_basics",
+      "patterns": ["power bi basics", "what is power bi", "learn power bi"],
+      "responses": ["Power BI is a business intelligence visualization tool."]
+    },
+    {
+      "tag": "pbi_dax",
+      "patterns": ["dax formulas", "dax basics", "calculate function"],
+      "responses": ["I can explain DAX functions with examples."]
+    },
+    {
+      "tag": "pbi_visuals",
+      "patterns": ["power bi visuals", "best visuals", "dashboard ideas"],
+      "responses": ["I can suggest visuals for your dashboard use case."]
+    },
+    {
+      "tag": "pbi_data_model",
+      "patterns": ["data modeling power bi", "star schema", "relationships"],
+      "responses": ["Power BI uses star schema-based data modeling."]
+    },
+    {
+      "tag": "pbi_interview",
+      "patterns": ["power bi interview", "pbi interview questions"],
+      "responses": ["I can list common Power BI interview questions."]
+    },
+
+
+
+    {
+      "tag": "soft_communication",
+      "patterns": ["improve communication", "better communication"],
+      "responses": ["I can guide you with communication improvement tips."]
+    },
+    {
+      "tag": "soft_teamwork",
+      "patterns": ["teamwork examples", "team collaboration"],
+      "responses": ["I can provide STAR-based teamwork examples."]
+    },
+    {
+      "tag": "soft_leadership",
+      "patterns": ["leadership examples", "leadership skills"],
+      "responses": ["I can help list leadership experience examples."]
+    },
+    {
+      "tag": "soft_conflict",
+      "patterns": ["conflict resolution example", "handle conflict"],
+      "responses": ["I can give workplace conflict STAR answers."]
+    },
+    {
+      "tag": "soft_problem_solve",
+      "patterns": ["problem solving example", "problem solving skill"],
+      "responses": ["Want STAR-based problem-solving answers?"]
+    },
+
+
+
+    {
+      "tag": "star_format",
+      "patterns": ["what is star method", "star interview"],
+      "responses": ["STAR stands for Situation, Task, Action, Result."]
+    },
+    {
+      "tag": "star_example_teamwork",
+      "patterns": ["teamwork star answer", "team collaboration star"],
+      "responses": ["I can give a STAR example for teamwork."]
+    },
+    {
+      "tag": "star_example_leadership",
+      "patterns": ["leadership star answer", "managed a team answer"],
+      "responses": ["Here is a leadership STAR answer example."]
+    },
+    {
+      "tag": "star_example_conflict",
+      "patterns": ["conflict star example", "disagreement answer"],
+      "responses": ["I can prepare a conflict-resolution STAR answer."]
+    },
+    {
+      "tag": "star_example_problem",
+      "patterns": ["problem solving star example", "complex issue answer"],
+      "responses": ["I can give problem-solving STAR responses."]
+    },
+
+
+
+    {
+      "tag": "hr_strengths",
+      "patterns": ["what are your strengths", "strengths answer"],
+      "responses": ["I can suggest strengths based on your role."]
+    },
+    {
+      "tag": "hr_weaknesses",
+      "patterns": ["your weaknesses", "weakness answer"],
+      "responses": ["I can give safe weaknesses with explanations."]
+    },
+    {
+      "tag": "hr_about_you",
+      "patterns": ["tell me about yourself", "about me answer"],
+      "responses": ["Share details to craft a strong introduction."]
+    },
+    {
+      "tag": "hr_why_hire",
+      "patterns": ["why should we hire you", "hire you answer"],
+      "responses": ["I can craft a strong personalized answer."]
+    },
+    {
+      "tag": "hr_career_goal",
+      "patterns": ["career goals", "future goals interview"],
+      "responses": ["I can help express realistic career goals."]
+    },
+    {
+      "tag": "hr_job_change",
+      "patterns": ["why job change", "reason for job switch"],
+      "responses": ["I can rewrite your job change reason professionally."]
+    },
+    {
+      "tag": "hr_salary",
+      "patterns": ["salary expectation question", "what salary do you expect"],
+      "responses": ["I can help you answer salary expectation safely."]
+    },
+    {
+      "tag": "general_user_greeting_intent",
+      "patterns": ["hello", "hi", "hey there", "good morning", "good evening"],
+      "responses": ["Hello! How can I support you today?"]
+    },
+    {
+      "tag": "general_user_exit_intent",
+      "patterns": ["bye", "goodbye", "exit", "talk later"],
+      "responses": ["Goodbye! Reach out anytime you need assistance."]
+    },
+    {
+      "tag": "general_bot_capability_query_intent",
+      "patterns": ["what can you do", "your features", "how can you help me"],
+      "responses": ["I can help with resumes, ATS scoring, job prep, interview questions, Python, ML, SQL and more."]
+    },
+
+
+
+    {
+      "tag": "resume_professional_summary_generation_intent",
+      "patterns": ["write resume summary", "create professional summary", "summary for my resume"],
+      "responses": ["Sure! Provide your experience and target role to generate a professional summary."]
+    },
+    {
+      "tag": "resume_experience_bullet_point_improvement_intent",
+      "patterns": ["rewrite my bullets", "improve resume points", "optimize my job description lines"],
+      "responses": ["Please share the bullet points you want refined."]
+    },
+    {
+      "tag": "resume_keyword_insertion_for_job_description_alignment_intent",
+      "patterns": ["insert keywords", "match resume keywords", "optimize keywords"],
+      "responses": ["Upload the job description to add relevant keywords."]
+    },
+    {
+      "tag": "resume_project_description_formatting_intent",
+      "patterns": ["format project details", "project description help", "write project bullets"],
+      "responses": ["Share your project details to convert them into ATS-friendly points."]
+    },
+    {
+      "tag": "resume_top_skills_recommendation_for_role_intent",
+      "patterns": ["skills for data analyst", "skills for ML engineer", "skills for python developer"],
+      "responses": ["Tell me your target role to provide the best resume skills."]
+    },
+    {
+      "tag": "resume_common_mistakes_identification_intent",
+      "patterns": ["resume mistakes", "resume problems", "common errors in resume"],
+      "responses": ["Here are common resume mistakes and how to avoid them."]
+    },
+    {
+      "tag": "resume_pdf_formatting_guidance_intent",
+      "patterns": ["pdf formatting", "ats pdf check", "fix pdf resume"],
+      "responses": ["Upload your PDF; I will evaluate its ATS readability."]
+    },
+    {
+      "tag": "resume_section_order_recommendation_intent",
+      "patterns": ["how to arrange resume", "resume order", "section order resume"],
+      "responses": ["I’ll recommend the best ordering based on your profile."]
+    },
+    {
+      "tag": "resume_role_specific_customization_intent",
+      "patterns": ["customize for job", "tailor resume for jd", "match for job posting"],
+      "responses": ["Share the job description for targeted customization."]
+    },
+
+
+
+    {
+      "tag": "ats_resume_score_calculation_intent",
+      "patterns": ["ats score", "check my ats", "ats evaluation"],
+      "responses": ["Upload your resume and JD to calculate ATS score."]
+    },
+    {
+      "tag": "ats_recommendations_for_score_improvement_intent",
+      "patterns": ["improve ats score", "raise my ats", "optimize ats"],
+      "responses": ["I can provide keyword and formatting improvements."]
+    },
+    {
+      "tag": "ats_keyword_gap_detection_intent",
+      "patterns": ["missing keywords", "keyword gap", "jd vs resume keywords"],
+      "responses": ["Upload JD + resume for keyword gap analysis."]
+    },
+    {
+      "tag": "ats_resume_parsing_and_structured_information_extraction_intent",
+      "patterns": ["parse resume", "extract information", "extract skills from resume"],
+      "responses": ["Upload your resume to extract structured data."]
+    },
+    {
+      "tag": "ats_file_format_and_layout_best_practices_intent",
+      "patterns": ["best format for ats", "ats layout", "ats friendly formatting"],
+      "responses": ["Use simple fonts, clear sections, and minimal tables."]
+    },
+
+
+
+    {
+      "tag": "cover_letter_customized_generation_intent",
+      "patterns": ["write cover letter", "cover letter help", "create cover letter"],
+      "responses": ["Share your resume + job description for a tailored cover letter."]
+    },
+    {
+      "tag": "cover_letter_improvement_and_rewriting_intent",
+      "patterns": ["rewrite my cover letter", "improve cover letter", "fix cover letter"],
+      "responses": ["Please paste your cover letter for optimization."]
+    },
+    {
+      "tag": "cover_letter_role_specific_version_intent",
+      "patterns": ["cover letter for data analyst", "letter for python role"],
+      "responses": ["I can create a role-specific cover letter. Please share details."]
+    },
+
+
+
+    {
+      "tag": "job_search_role_suggestion_based_on_profile_intent",
+      "patterns": ["suggest job roles", "which jobs suit me", "roles for my profile"],
+      "responses": ["Share skills + experience to suggest suitable roles."]
+    },
+    {
+      "tag": "job_openings_recommendation_intent",
+      "patterns": ["find jobs", "job openings", "companies hiring now"],
+      "responses": ["Tell me your domain and location preference."]
+    },
+    {
+      "tag": "job_application_strategy_guidance_intent",
+      "patterns": ["how to apply for jobs", "application strategy", "apply effectively"],
+      "responses": ["I can guide you on networking, referrals, and job platforms."]
+    },
+    {
+      "tag": "job_salary_expectation_guidance_intent",
+      "patterns": ["salary expectation", "expected ctc", "how much to ask"],
+      "responses": ["I will guide based on market standards for your role."]
+    },
+    {
+      "tag": "job_company_research_support_intent",
+      "patterns": ["info about company", "research company before interview"],
+      "responses": ["Tell me the company name for tailored insights."]
+    },
+
+
+
+    {
+      "tag": "interview_overall_preparation_plan_intent",
+      "patterns": ["prepare me for interview", "interview prep help"],
+      "responses": ["Share your target role for a custom interview plan."]
+    },
+    {
+      "tag": "interview_common_hr_question_list_intent",
+      "patterns": ["common hr questions", "basic hr interview", "general interview questions"],
+      "responses": ["Here are the most frequently asked HR questions."]
+    },
+    {
+      "tag": "interview_role_specific_technical_questions_intent",
+      "patterns": ["technical questions", "role based interview questions"],
+      "responses": ["Tell me the role to provide technical questions."]
+    },
+    {
+      "tag": "interview_behavioral_star_method_question_intent",
+      "patterns": ["behavioral questions", "star questions", "situational interview"],
+      "responses": ["I can provide STAR-formatted behavioral questions."]
+    },
+    {
+      "tag": "interview_answer_improvement_intent",
+      "patterns": ["fix my interview answer", "improve my reply", "rewrite answer"],
+      "responses": ["Share your answer to improve it."]
+    },
+    {
+      "tag": "interview_company_specific_question_preparation_intent",
+      "patterns": ["interview questions for tcs", "accenture interview questions"],
+      "responses": ["Tell me the company name to generate custom questions."]
+    },
+    {
+      "tag": "interview_salary_negotiation_guidance_intent",
+      "patterns": ["how to negotiate salary", "salary negotiation tips"],
+      "responses": ["I can help refine your negotiation strategy."]
+    },
+    {
+      "tag": "interview_post_interview_followup_guidance_intent",
+      "patterns": ["follow up mail", "after interview email"],
+      "responses": ["I can help write a professional follow-up email."]
+    },
+
+  
+
+    {
+      "tag": "python_beginner_concepts_explanation_intent",
+      "patterns": ["python basics", "intro python", "learn python"],
+      "responses": ["I can explain Python fundamentals with examples."]
+    },
+    {
+      "tag": "python_advanced_concepts_explanation_intent",
+      "patterns": ["python advanced", "decorators explain", "generators explain"],
+      "responses": ["I can explain advanced Python concepts easily."]
+    },
+    {
+      "tag": "python_error_debugging_help_intent",
+      "patterns": ["fix python error", "python traceback", "solve my code issue"],
+      "responses": ["Paste your code or error message for debugging."]
+    },
+    {
+      "tag": "python_role_specific_question_set_intent",
+      "patterns": ["python developer questions", "python interview"],
+      "responses": ["I can generate Python dev interview questions."]
+    },
+    {
+      "tag": "python_project_recommendation_intent",
+      "patterns": ["python project ideas", "mini Python project"],
+      "responses": ["I can recommend beginner to advanced projects."]
+    },
+
+  
+
+    {
+      "tag": "ml_conceptual_overview_intent",
+      "patterns": ["what is machine learning", "ml basics", "explain ml"],
+      "responses": ["Machine learning helps systems learn patterns from data."]
+    },
+    {
+      "tag": "ml_algorithm_explanation_intent",
+      "patterns": ["explain ml algorithms", "supervised algorithms list"],
+      "responses": ["I can explain ML algorithms with examples."]
+    },
+    {
+      "tag": "ml_model_evaluation_metrics_intent",
+      "patterns": ["evaluation metrics", "precision recall f1", "ml metrics"],
+      "responses": ["Here are common evaluation metrics explained."]
+    },
+    {
+      "tag": "ml_overfitting_and_underfitting_explanation_intent",
+      "patterns": ["what is overfitting", "underfitting explain"],
+      "responses": ["I can explain both with examples and fixes."]
+    },
+    {
+      "tag": "ml_practical_project_recommendation_intent",
+      "patterns": ["ml project ideas", "machine learning projects"],
+      "responses": ["I can suggest end-to-end ML projects."]
+    },{
+      "tag": "role_based_responsibilities_for_data_analyst",
+      "patterns": [
+        "What are the responsibilities of a data analyst?",
+        "Tell me what a data analyst does",
+        "Explain typical duties for a data analyst"
+      ],
+      "responses": [
+        "A data analyst is responsible for data cleaning, visualization, reporting, dashboard creation, statistical analysis, and supporting business decisions using data-driven insights."
+      ]
+    },
+    {
+      "tag": "role_based_responsibilities_for_machine_learning_engineer",
+      "patterns": [
+        "What work does an ML engineer do?",
+        "Explain responsibilities of a machine learning engineer",
+        "ML engineer daily tasks"
+      ],
+      "responses": [
+        "A machine learning engineer builds ML models, optimizes pipelines, deploys models, writes scalable code, manages data pipelines, and works closely with data scientists."
+      ]
+    },
+    {
+      "tag": "role_based_responsibilities_for_python_developer",
+      "patterns": [
+        "Python developer job responsibilities?",
+        "What does a Python developer do?",
+        "Explain Python developer tasks"
+      ],
+      "responses": [
+        "A Python developer builds backend systems, APIs, automation scripts, integrates databases, writes reusable code, and may work on data or AI pipelines depending on the role."
+      ]
+    },
+    {
+      "tag": "explain_resume_achievements_best_practices",
+      "patterns": [
+        "How do I write achievements on a resume?",
+        "Best way to list achievements?",
+        "Explain resume achievement writing"
+      ],
+      "responses": [
+        "Resume achievements must be quantifiable, impact-focused, and written using action verbs. For example: 'Increased model accuracy by 18%', or 'Reduced processing time by 40% by optimizing code.'"
+      ]
+    },
+    {
+      "tag": "explain_resume_experience_section_rules",
+      "patterns": [
+        "How should I write my experience section?",
+        "Rules for resume experience writing",
+        "Guide to writing experience on a CV"
+      ],
+      "responses": [
+        "Keep the experience section concise, use bullet points, focus on quantifiable impact, list technologies used, and start each point with a strong action verb. Avoid job descriptions; emphasize achievements."
+      ]
+    },
+    {
+      "tag": "explain_resume_projects_section_guidelines",
+      "patterns": [
+        "How to write project descriptions?",
+        "Best way to present projects on resume",
+        "Project section guidelines"
+      ],
+      "responses": [
+        "Describe each project with problem → approach → tools → result. Include metrics and list core technologies such as Python, SQL, ML models, APIs, etc., depending on the project."
+      ]
+    },
+    {
+      "tag": "explain_resume_certifications_section_guidelines",
+      "patterns": [
+        "How should certifications be listed?",
+        "Certifications section formatting?",
+        "Where to put certifications on my resume?"
+      ],
+      "responses": [
+        "List certifications with issuing organization, completion year, and optional credential ID. Keep them relevant to your job target such as AI, ML, data, cloud, or software development."
+      ]
+    },
+    {
+      "tag": "resume_job_target_definition",
+      "patterns": [
+        "What is a resume job target?",
+        "Explain job target in a resume",
+        "Do I need a job target section?"
+      ],
+      "responses": [
+        "A job target defines the specific role your resume is optimized for, such as 'Data Analyst', 'ML Engineer' or 'Python Developer'. All resume sections must align with that target."
+      ]
+    },
+    {
+      "tag": "ats_preferred_resume_format_explanation",
+      "patterns": [
+        "Which resume format is ATS friendly?",
+        "Explain ATS-compatible resume style",
+        "What format passes ATS systems?"
+      ],
+      "responses": [
+        "ATS-friendly resumes use simple fonts, no tables, no graphics, and clear section headers. Use Word or PDF format, bullet points, and standard wording for skills and job titles."
+      ]
+    },
+    {
+      "tag": "ats_skill_matching_logic_explanation",
+      "patterns": [
+        "How does ATS match skills?",
+        "Explain skill matching in ATS",
+        "ATS keyword scan logic"
+      ],
+      "responses": [
+        "ATS systems compare your resume keywords to the job description. They scan for exact matches, contextual relevance, repeated skill presence, job title alignment, and seniority level indicators."
+      ]
+    },
+    {
+      "tag": "ats_keyword_density_rules",
+      "patterns": [
+        "How many times should I repeat a keyword?",
+        "Keyword density for ATS?",
+        "How often should skills appear in resume?"
+      ],
+      "responses": [
+        "Important skills should appear at least 2–3 times across projects, experience, and skills sections. Avoid keyword stuffing — keep it natural and relevant to real experience."
+      ]
+    },
+    {
+      "tag": "ats_hard_skills_priority_explanation",
+      "patterns": [
+        "Do ATS prefer hard skills?",
+        "Are technical skills more important?",
+        "ATS hard skill matching"
+      ],
+      "responses": [
+        "Yes, ATS prioritizes hard skills such as Python, SQL, Power BI, TensorFlow, NumPy, Pandas, and Cloud Tools. These skills must match the exact wording in the job posting."
+      ]
+    },
+    {
+      "tag": "ats_soft_skills_matching_rules",
+      "patterns": [
+        "Does ATS read soft skills?",
+        "Are soft skills important for ATS?",
+        "ATS soft skills logic"
+      ],
+      "responses": [
+        "ATS gives minor weight to soft skills unless the job description emphasizes them. They should be included but not overused — focus more on technical abilities and achievements."
+      ]
+    },
+    {
+      "tag": "ats_pdf_vs_docx_preference",
+      "patterns": [
+        "Should I use PDF or Word for ATS?",
+        "ATS PDF or DOCX?",
+        "Which format is better for ATS scans?"
+      ],
+      "responses": [
+        "Most modern ATS systems accept both PDF and DOCX. However, DOCX is the safest choice across all ATS platforms, especially for government or enterprise job portals."
+      ]
+    },
+    {
+      "tag": "sql_normalization_definition",
+      "patterns": [
+        "Explain what is normalization",
+        "What is normalization in SQL?",
+        "Describe normalization"
+      ],
+      "responses": [
+        "Normalization is the process of structuring a database to reduce redundancy and improve data integrity. Common forms include 1NF, 2NF, and 3NF."
+      ]
+    },
+    {
+      "tag": "sql_denormalization_definition",
+      "patterns": [
+        "Explain denormalization",
+        "What is denormalization?",
+        "Why denormalization is used?"
+      ],
+      "responses": [
+        "Denormalization is used to improve read performance by increasing redundancy. It is common in data warehouses and OLAP systems for fast analytics."
+      ]
+    },
+    {
+      "tag": "python_multithreading_explanation",
+      "patterns": [
+        "Explain multithreading in Python",
+        "What is Python multithreading?",
+        "Does Python support multithreading?"
+      ],
+      "responses": [
+        "Python supports multithreading through the threading module, but CPU-bound tasks are limited by the Global Interpreter Lock (GIL). It works well for I/O-bound tasks."
+      ]
+    },
+    {
+      "tag": "python_multiprocessing_explanation",
+      "patterns": [
+        "Explain multiprocessing in Python",
+        "Difference between threads and processes?",
+        "Python multiprocessing meaning"
+      ],
+      "responses": [
+        "Multiprocessing in Python creates separate processes with independent memory, making it ideal for CPU-heavy tasks such as model training and parallel computation."
+      ]
+    },
+    {
+      "tag": "python_oop_core_concepts_explanation",
+      "patterns": [
+        "Explain OOP concepts",
+        "Object-oriented programming in Python?",
+        "Python OOP basics"
+      ],
+      "responses": [
+        "Python OOP includes classes, objects, inheritance, polymorphism, encapsulation, and abstraction. These help structure code into reusable components."
+      ]
+    },
+    {
+      "tag": "ml_supervised_learning_definition",
+      "patterns": [
+        "What is supervised learning?",
+        "Explain supervised ML",
+        "Definition of supervised learning"
+      ],
+      "responses": [
+        "Supervised learning is a machine learning approach where models learn from labeled data. Examples include regression, classification, and time-series forecasting."
+      ]
+    },
+    {
+      "tag": "ml_unsupervised_learning_definition",
+      "patterns": [
+        "What is unsupervised learning?",
+        "Explain unsupervised ML",
+        "Definition of unsupervised learning"
+      ],
+      "responses": [
+        "Unsupervised learning identifies patterns in unlabeled data. Common techniques include clustering (K-Means), dimensionality reduction (PCA), and association rules."
+      ]
+    },
+    {
+      "tag": "ml_overfitting_explanation",
+      "patterns": [
+        "Explain overfitting",
+        "What is overfitting?",
+        "Why models overfit?"
+      ],
+      "responses": [
+        "Overfitting occurs when a model learns noise instead of patterns, performing well on training data but poorly on unseen data. Techniques like regularization and cross-validation help prevent it."
+      ]
+    },
+    {
+      "tag": "ml_underfitting_explanation",
+      "patterns": [
+        "Explain underfitting",
+        "What is underfitting?",
+        "Why models underfit?"
+      ],
+      "responses": [
+        "Underfitting occurs when a model is too simple to capture underlying patterns. This can be solved by adding more features, using complex models, or increasing training time."
+      ]
+    },
+    {
+      "tag": "ml_feature_engineering_techniques_overview",
+      "patterns": [
+        "Explain feature engineering",
+        "What is feature engineering?",
+        "Give feature engineering examples"
+      ],
+      "responses": [
+        "Feature engineering includes scaling, encoding, binning, polynomial features, handling missing values, and extracting domain-specific attributes to improve model performance."
+      ]
+    },
+    {
+      "tag": "ml_model_evaluation_methods_explanation",
+      "patterns": [
+        "Explain model evaluation methods",
+        "How do you evaluate ML models?",
+        "Model evaluation techniques overview"
+      ],
+      "responses": [
+        "Model evaluation methods include accuracy, precision, recall, F1-score, ROC-AUC, confusion matrix, RMSE, MAE, and cross-validation depending on the task type."
+      ]
+    },
+    {
+      "tag": "ml_cross_validation_definition",
+      "patterns": [
+        "What is cross validation?",
+        "Explain K-fold cross validation",
+        "Why do we use cross-validation?"
+      ],
+      "responses": [
+        "Cross-validation evaluates model performance by splitting data into K folds and training/testing repeatedly to reduce overfitting and estimate generalization performance."
+      ]
+    },
+    {
+      "tag": "ml_bias_variance_tradeoff_explanation",
+      "patterns": [
+        "Explain bias variance tradeoff",
+        "What is the bias variance tradeoff?",
+        "Bias vs variance in ML"
+      ],
+      "responses": [
+        "The bias-variance tradeoff describes how simple models have high bias and low variance, while complex models have low bias and high variance. The goal is balancing both for optimal performance."
+      ]
+    },
+    {
+      "tag": "ml_evaluation_confusion_matrix_explanation",
+      "patterns": [
+        "Explain confusion matrix",
+        "What is confusion matrix?",
+        "How to interpret confusion matrix?"
+      ],
+      "responses": [
+        "A confusion matrix shows true positives, true negatives, false positives, and false negatives. It helps evaluate classification accuracy and error distribution."
+      ]
+    },
+    {
+      "tag": "ml_dimensionality_reduction_overview",
+      "patterns": [
+        "Explain dimensionality reduction",
+        "What is dimensionality reduction?",
+        "Why reduce dimensions in ML?"
+      ],
+      "responses": [
+        "Dimensionality reduction techniques such as PCA, t-SNE, and UMAP remove irrelevant features, improve training speed, reduce overfitting, and help visualizing high-dimensional data."
+      ]
+    },
+    {
+      "tag": "python_exception_handling_explanation",
+      "patterns": [
+        "Explain exception handling in Python",
+        "What is try except in Python?",
+        "Error handling Python basics"
+      ],
+      "responses": [
+        "Python exception handling uses try, except, finally, and else blocks to catch and manage runtime errors. It ensures stability and prevents application crashes."
+      ]
+    },
+    {
+      "tag": "python_generators_definition",
+      "patterns": [
+        "What are Python generators?",
+        "Explain generators in Python",
+        "Why use Python generators?"
+      ],
+      "responses": [
+        "Generators are iterators created using 'yield', allowing lazy evaluation. They optimize memory usage in large datasets and pipelines and improve performance."
+      ]
+    },
+    {
+      "tag": "python_decorators_definition",
+      "patterns": [
+        "Explain decorators in Python",
+        "What are Python decorators?",
+        "Why use decorators?"
+      ],
+      "responses": [
+        "Decorators allow modifying functions without changing their code using '@decorator' syntax. They are widely used in logging, authentication, caching, and frameworks like Flask and FastAPI."
+      ]
+    },
+    {
+      "tag": "python_lambda_functions_definition",
+      "patterns": [
+        "What is lambda in Python?",
+        "Explain lambda function",
+        "Why use lambda expressions?"
+      ],
+      "responses": [
+        "Lambda functions are small anonymous functions defined using 'lambda'. They are useful for short operations like filtering, mapping, and sorting."
+      ]
+    },
+    {
+      "tag": "python_list_comprehension_definition",
+      "patterns": [
+        "Explain list comprehension",
+        "What is list comprehension?",
+        "Example of list comprehension in Python"
+      ],
+      "responses": [
+        "List comprehension provides a concise syntax for creating lists. Example: `[x*x for x in range(5)]`. It improves readability and performance."
+      ]
+    },
+    {
+      "tag": "sql_groupby_having_difference",
+      "patterns": [
+        "Difference between GROUP BY and HAVING?",
+        "GROUP BY vs HAVING?",
+        "Explain HAVING clause"
+      ],
+      "responses": [
+        "GROUP BY groups rows by column values, while HAVING filters groups after aggregation. HAVING works like WHERE but for aggregated data."
+      ]
+    },
+    {
+      "tag": "sql_joins_overview",
+      "patterns": [
+        "Explain different SQL joins",
+        "What are the types of joins?",
+        "SQL joins explanation"
+      ],
+      "responses": [
+        "SQL supports INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, and CROSS JOIN. Each join determines how two tables match based on related columns."
+      ]
+    },
+    {
+      "tag": "sql_indexing_explanation",
+      "patterns": [
+        "What are SQL indexes?",
+        "Explain indexing in SQL",
+        "How do indexes speed up queries?"
+      ],
+      "responses": [
+        "Indexes improve query speed by creating quick lookup structures. They reduce search time but increase storage and slow down write operations slightly."
+      ]
+    },
+    {
+      "tag": "sql_window_functions_explanation",
+      "patterns": [
+        "Explain window functions",
+        "What are window functions?",
+        "SQL window functions examples"
+      ],
+      "responses": [
+        "Window functions like ROW_NUMBER(), RANK(), DENSE_RANK(), and LAG() perform calculations over partitions of data without collapsing rows like GROUP BY."
+      ]
+    },
+    {
+      "tag": "resume_customization_for_specific_job_role",
+      "patterns": [
+        "How do I customize resume for a job?",
+        "Resume customization tips for job roles",
+        "Optimize resume for specific job"
+      ],
+      "responses": [
+        "Customization involves matching your experience, keywords, achievements, and skills to the job description. Highlight tools and responsibilities mentioned in the posting."
+      ]
+    },
+    {
+      "tag": "resume_summary_writing_best_practices",
+      "patterns": [
+        "How do I write a resume summary?",
+        "Best way to write career summary?",
+        "Help me write resume summary"
+      ],
+      "responses": [
+        "A strong summary includes your title, experience level, key skills, and achievements. Example: 'Data Analyst with 1+ year experience in Python, SQL, Power BI, and ML models.'"
+      ]
+    },
+    {
+      "tag": "resume_action_verbs_examples",
+      "patterns": [
+        "Give action verbs for resume",
+        "What are good resume action words?",
+        "Resume powerful verbs list"
+      ],
+      "responses": [
+        "Common resume action verbs include: optimized, automated, developed, implemented, improved, analyzed, designed, deployed, collaborated, integrated, and streamlined."
+      ]
+    },
+    {
+      "tag": "resume_mistakes_to_avoid",
+      "patterns": [
+        "Resume mistakes to avoid?",
+        "What should I avoid on resume?",
+        "Common resume errors?"
+      ],
+      "responses": [
+        "Avoid long paragraphs, vague statements, missing keywords, spelling errors, irrelevant details, oversized resumes, and complex formatting that breaks ATS parsing."
+      ]
+    },
+    {
+      "tag": "certifications_section",
+      "patterns": ["certifications to add", "should I add courses", "resume certifications tips"],
+      "responses": ["Add relevant certifications matching your job role.", "Include only certifications that strengthen your skillset."]
+    },
+    {
+      "tag": "ats_guidelines",
+      "patterns": ["ATS rules", "how ATS works", "resume ATS tips", "ATS friendly resume"],
+      "responses": ["ATS checks keywords, formatting, and job relevance.", "Avoid tables, images, columns, and fancy fonts for ATS optimization."]
+    },
+    {
+      "tag": "ats_rejection_reasons",
+      "patterns": ["why ATS rejected resume", "ATS fail reasons", "resume not selected ATS"],
+      "responses": ["Common reasons: missing keywords, bad formatting, or role mismatch.", "I can analyze your resume and identify ATS issues."]
+    },
+    {
+      "tag": "quantify_achievements",
+      "patterns": ["add metrics", "quantify achievements", "numbers in resume"],
+      "responses": ["Yes — metrics make your impact measurable.", "Use numbers like improved performance, reduced time, increased revenue."]
+    },
+    {
+      "tag": "bullet_points_rewrite",
+      "patterns": ["rewrite bullet points", "improve resume bullets", "enhance achievements"],
+      "responses": ["Send your bullet points and I’ll rewrite them with strong action verbs and measurable results.", "I can enhance your achievements to be ATS friendly and impactful."]
+    },
+    {
+      "tag": "career_gap_explanation",
+      "patterns": ["explain career gap", "career gap help", "how to justify gap"],
+      "responses": ["Highlight certifications, freelancing, skill-building done during the gap.", "Use positive framing and focus on growth and learning."]
+    }
+
+
+  ]
+}
