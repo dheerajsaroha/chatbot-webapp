@@ -1,0 +1,66 @@
+<!-- Frontend Optimization Script -->
+<!-- Add this to your index.html to prevent duplicate requests and improve UX -->
+
+<script>
+let debounceTimer;
+let isLoading = false;
+
+function sendMessage() {
+    clearTimeout(debounceTimer);
+    
+    const userInput = document.getElementById("userInput");
+    const message = userInput.value.trim();
+    
+    if (!message || isLoading) return;
+    
+    // Debounce: wait 300ms before sending
+    debounceTimer = setTimeout(() => {
+        isLoading = true;
+        
+        const formData = new FormData();
+        formData.append('message', message);
+        
+        fetch('/get_response', {
+            method: 'POST',
+            body: formData
+        })
+        .then(r => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        })
+        .then(data => {
+            displayResponse(data.reply);
+            userInput.value = '';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            displayResponse('Error: Could not get response. Please try again.');
+        })
+        .finally(() => {
+            isLoading = false;
+        });
+    }, 300);
+}
+
+// Add Enter key support
+document.addEventListener('DOMContentLoaded', function() {
+    const userInput = document.getElementById("userInput");
+    if (userInput) {
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+});
+
+function displayResponse(reply) {
+    const chatBox = document.getElementById("chatBox");
+    if (chatBox) {
+        const msgDiv = document.createElement("div");
+        msgDiv.innerHTML = `<strong>Bot:</strong> ${reply}`;
+        chatBox.appendChild(msgDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+}
+</script>
